@@ -13,7 +13,7 @@ def hashing(string):
     encryptedString = shaEncryption.hexdigest()
     return encryptedString
 
-#Driver code/asking for credi.
+#Driver code/asking for credentials.
 def main():
     userInput = input('Which string do you want to encrypt ? :')
     print(userInput,"/ after encryption string becomes :  ")
@@ -35,5 +35,5 @@ def main():
     print()
     print('Thanks for using this program !')
 
-#Calling main() function to start the inputs
+#Calling main() function to start the program
 main()
