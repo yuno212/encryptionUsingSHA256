@@ -1,4 +1,4 @@
-# Encryption
+# Encryption using SHA256
 **Given a string or a .txt file with plain text. Returns his encryption using SHA256 method**
 
 #  Requirements : 
