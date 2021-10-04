@@ -10,7 +10,7 @@ from time import sleep
 #  Features/Perks :
 
 #### -  Could copy the hashed output.
-#### -  Beginner friendly (undestandable code).
+#### -  Beginner friendly (understandable code).
 #### -  Clean UI.
 
 #  Contact : 
