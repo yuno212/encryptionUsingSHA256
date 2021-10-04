@@ -13,6 +13,12 @@ def hashing(string):
     encryptedString = shaEncryption.hexdigest()
     return encryptedString
 
+def getText(txtFile):
+    with open('file.txt') as f:
+    contents = f.read()
+    return contents
+     
+        
 #Driver code/asking for credentials.
 def main():
     userInput = input('Which string do you want to encrypt ? :')
