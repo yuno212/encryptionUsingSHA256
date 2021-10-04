@@ -38,12 +38,12 @@ def main():
         print(output)
         print()
         copying = input('wanna copy the encryption ? (y/n) : ')
-        if copying.lower()=='y' or 'yes':
+        if copying.lower()=='y':
             pyperclip.copy(output)
             print('Copied to clipboard ! ')
             sleep(3)
             print()
-        if copying.lower()== 'n' or 'no':
+        if copying.lower()== 'n':
             print('bye ! ')
             print()
     if userInput.lower() == 'n':
@@ -53,13 +53,13 @@ def main():
         print(output)
         print()
         copying = input("wanna copy it ? (y/n) : ")
-        if copying == 'y' or 'yes':
+        if copying == 'y':
             pyperclip.copy(output)
             print()
             print('Copied')
             print()
             sleep(3)
-        if copying == 'n' or 'no':
+        if copying == 'n':
             print('bye')
 
 
