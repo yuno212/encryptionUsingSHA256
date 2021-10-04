@@ -21,51 +21,45 @@ def fileExtensionHandler(fileName):
     else:
         fileName += '.txt'
         return fileName
-    
+
 #Method to get string through a .txt file.
-def getString(fileName: str):
+def getString(fileName):
     with open(fileExtensionHandler(fileName)) as f:
         output = f.read()
     return output
 
 #Driver code/asking for credentials.
 def main():
-    output = hashing(userInput)
-    userInput = input("Is your content located in a text file or not (y/n)")
-    if userInput.lower() == 'y' or 'yes':
-        userInput = getStringThroughTextFile(fileName)
-        print(output)
-        copyOrNot = input('do you want to copy the encrypted string yes/no ? : ')
-        if copyOrNot.lower() == 'y' or 'yes':
-            #Method to actually copy the encrypted string.
-            pyperclip.copy(hashing(userInput))
-            print()
-            print('Copied to clipboard ! ')
-            sleep(3)
-        elif copyOrNot.lower() == 'n' or 'no':
-            print("It's Ok, goodbye")
-            sleep(3)
-           
-    else:
-        userInput = input("Which string do you want to encrypt ? :")
-        print(userInput,"/ after encryption string becomes :  ")
-        print()
+    userInput = input('text file or not, (y/n) : ')
+    if userInput == 'y':
+        fileName = input(' name ? : ')
+        userInput = getString(fileName)
+        output = hashing(userInput)
         print(output)
         print()
-        copyOrNot = input('do you want to copy the encrypted string yes/no ? : ')
-
-        if copyOrNot.lower() == 'y' or 'yes':
-            #Method to actually copy the encrypted string.
-            pyperclip.copy(hashing(userInput))
-            print()
+        copying = input('wanna copy the encryption ? (y/n) : ')
+        if copying.lower()=='y' or 'yes':
+            pyperclip.copy(output)
             print('Copied to clipboard ! ')
             sleep(3)
-        elif copyOrNot.lower() == 'n' or 'no':
-            print("It's Ok, goodbye")
-            sleep(3)
-            
+            print()
+        if copying.lower()== 'n' or 'no':
+            print('bye ! ')
+            print()
+    if userInput.lower() == 'n':
+        userInput = input("What's the string u wanna encryt ? : ")
+        output = hashing(userInput)
         print()
-        print('Thanks for using this program !')
+        print(output)
+        print()
+        copying = input("wanna copy it ? (y/n) : ")
+        if copying == 'y' or 'yes':
+            pyperclip.copy(output)
+            print()
+            print('Copied')
+            print()
+            sleep(3)
+        if copying == 'n' or 'no':
+            print('bye')
 
-#Calling main() function to start the program
 main()
