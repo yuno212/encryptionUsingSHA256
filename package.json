@@ -1,0 +1,21 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "cleanOne",
+  "main": "server.js",
+  "scripts": {
+    "app": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^14.3.2",
+    "express": "^4.17.2",
+    "strip": "^3.0.0",
+    "stripe": "^8.201.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
